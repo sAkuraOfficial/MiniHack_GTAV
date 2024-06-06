@@ -10,5 +10,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 
 add_subdirectory(external/hello_imgui)
+add_subdirectory(module)
 
 hello_imgui_add_app(MiniHack main.cpp MiniHack.cpp MiniHack.h)
+target_link_libraries(MiniHack PRIVATE memory)
